@@ -1,0 +1,214 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:Raspberry_Pi_2_3 J?
+U 1 1 5C93F991
+P 3250 2650
+F 0 "J?" H 3250 4128 50  0000 C CNN
+F 1 "Raspberry_Pi_2_3" H 3250 4037 50  0000 C CNN
+F 2 "" H 3250 2650 50  0001 C CNN
+F 3 "https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf" H 3250 2650 50  0001 C CNN
+	1    3250 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_PHOTO R?
+U 1 1 5C93FB2B
+P 5950 1700
+F 0 "R?" V 5625 1700 50  0000 C CNN
+F 1 "R_PHOTO" V 5716 1700 50  0000 C CNN
+F 2 "" V 6000 1450 50  0001 L CNN
+F 3 "~" H 5950 1650 50  0001 C CNN
+	1    5950 1700
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_PHOTO R?
+U 1 1 5C93FDB6
+P 5950 2250
+F 0 "R?" V 5625 2250 50  0000 C CNN
+F 1 "R_PHOTO" V 5716 2250 50  0000 C CNN
+F 2 "" V 6000 2000 50  0001 L CNN
+F 3 "~" H 5950 2200 50  0001 C CNN
+	1    5950 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_PHOTO R?
+U 1 1 5C93FDDE
+P 5950 2900
+F 0 "R?" V 5625 2900 50  0000 C CNN
+F 1 "R_PHOTO" V 5716 2900 50  0000 C CNN
+F 2 "" V 6000 2650 50  0001 L CNN
+F 3 "~" H 5950 2850 50  0001 C CNN
+	1    5950 2900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 5C93FE63
+P 5950 3550
+F 0 "D?" H 5941 3766 50  0000 C CNN
+F 1 "LED" H 5941 3675 50  0000 C CNN
+F 2 "" H 5950 3550 50  0001 C CNN
+F 3 "~" H 5950 3550 50  0001 C CNN
+	1    5950 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 5C940035
+P 5950 4000
+F 0 "D?" H 5941 4216 50  0000 C CNN
+F 1 "LED" H 5941 4125 50  0000 C CNN
+F 2 "" H 5950 4000 50  0001 C CNN
+F 3 "~" H 5950 4000 50  0001 C CNN
+	1    5950 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 5C940063
+P 5950 4500
+F 0 "D?" H 5941 4716 50  0000 C CNN
+F 1 "LED" H 5941 4625 50  0000 C CNN
+F 2 "" H 5950 4500 50  0001 C CNN
+F 3 "~" H 5950 4500 50  0001 C CNN
+	1    5950 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8250 1700 7850 1700
+Wire Wire Line
+	6850 1700 6850 2250
+Wire Wire Line
+	6850 2250 6100 2250
+Connection ~ 6850 1700
+Wire Wire Line
+	6850 1700 6100 1700
+Wire Wire Line
+	6850 2250 6850 2900
+Wire Wire Line
+	6850 2900 6100 2900
+Connection ~ 6850 2250
+$Comp
+L power:+5V #PWR?
+U 1 1 5C941D40
+P 8250 1600
+F 0 "#PWR?" H 8250 1450 50  0001 C CNN
+F 1 "+5V" H 8265 1773 50  0000 C CNN
+F 2 "" H 8250 1600 50  0001 C CNN
+F 3 "" H 8250 1600 50  0001 C CNN
+	1    8250 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8250 1700 8250 1600
+Wire Wire Line
+	6100 3550 6100 4000
+Wire Wire Line
+	6100 4500 6100 4000
+Connection ~ 6100 4000
+Wire Wire Line
+	6100 4000 6500 4000
+$Comp
+L power:GND #PWR?
+U 1 1 5C941F7D
+P 6500 4150
+F 0 "#PWR?" H 6500 3900 50  0001 C CNN
+F 1 "GND" H 6505 3977 50  0000 C CNN
+F 2 "" H 6500 4150 50  0001 C CNN
+F 3 "" H 6500 4150 50  0001 C CNN
+	1    6500 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 4000 6500 4150
+Wire Wire Line
+	5800 1700 4150 1700
+Wire Wire Line
+	4150 1700 4150 1750
+Wire Wire Line
+	4150 1750 4050 1750
+Wire Wire Line
+	5800 2250 5650 2250
+Wire Wire Line
+	5650 2250 5650 1850
+Wire Wire Line
+	5650 1850 4050 1850
+Wire Wire Line
+	5800 2900 5500 2900
+Wire Wire Line
+	5500 2900 5500 2050
+Wire Wire Line
+	5500 2050 4050 2050
+Wire Wire Line
+	5800 3550 5300 3550
+Wire Wire Line
+	5300 3550 5300 2150
+Wire Wire Line
+	5300 2150 4050 2150
+Wire Wire Line
+	5800 4000 5000 4000
+Wire Wire Line
+	5000 4000 5000 2350
+Wire Wire Line
+	5000 2350 4050 2350
+Wire Wire Line
+	5800 4500 4800 4500
+Wire Wire Line
+	4800 4500 4800 2450
+Wire Wire Line
+	4800 2450 4050 2450
+$Comp
+L Switch:SW_MEC_5G SW?
+U 1 1 5C9433E7
+P 7850 2850
+F 0 "SW?" V 7804 2998 50  0000 L CNN
+F 1 "SW_MEC_5G" V 7895 2998 50  0000 L CNN
+F 2 "" H 7850 3050 50  0001 C CNN
+F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 7850 3050 50  0001 C CNN
+	1    7850 2850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7850 2750 7850 2650
+Connection ~ 7850 1700
+Wire Wire Line
+	7850 1700 6850 1700
+Connection ~ 7850 2650
+Wire Wire Line
+	7850 2650 7850 1700
+Wire Wire Line
+	4350 3050 4350 2550
+Wire Wire Line
+	4350 2550 4050 2550
+Wire Wire Line
+	7850 3050 4350 3050
+$Comp
+L power:GND #PWR?
+U 1 1 5C944962
+P 2850 4200
+F 0 "#PWR?" H 2850 3950 50  0001 C CNN
+F 1 "GND" H 2855 4027 50  0000 C CNN
+F 2 "" H 2850 4200 50  0001 C CNN
+F 3 "" H 2850 4200 50  0001 C CNN
+	1    2850 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 4200 2850 3950
+$EndSCHEMATC
