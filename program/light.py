@@ -15,6 +15,7 @@ sensor3 = LightSensor(18)
 button = Button(23)
 
 choiceIndex = 0
+#add and for if choice index == 0 so it can loop if you dont order anython?
 while (not button.is_pressed):
     if(sensor1.light_detected):
         print("sensor 1 on")
@@ -42,4 +43,13 @@ while (not button.is_pressed):
         print("sensor 3 off")
 
 print(choiceIndex)
+if(choiceIndex == 1):
+    execfile("pizza1.py")
+    print("ordering pizza 1!!!")
+if(choiceIndex == 2):
+    execfile("pizza2.py")
+    print("ordering pizza 2!!!")
+if(choiceIndex == 3):
+    execfile("pizza3.py")
+    print("ordering pizza 3!!")
 
