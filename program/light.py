@@ -2,9 +2,9 @@ from pizzapi import *
 from gpiozero import LightSensor
 from gpiozero import Button
 from gpiozero import LED
-import order1.py
-import order2.py
-import order3.py
+import pizza1
+import pizza2.py
+import pizza3.py
 
 led1 = LED(21)
 led2 = LED(20)
