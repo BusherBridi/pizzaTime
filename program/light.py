@@ -1,10 +1,25 @@
-from pizzapi import * 
+from pizzapi import *
 from gpiozero import LightSensor
 from gpiozero import Button
 from gpiozero import LED
-import pizza1
-import pizza2.py
-import pizza3.py
+
+firstName = "Busher"
+lastName = "Bridi"
+email = "bridibusher@gmail.com"
+phone = "###"
+customer = Customer(firstName, lastName, email, phone)
+street = "Adress"
+city = "visalia"
+state = "CA"
+zip = "93919"
+address = Address(street, city, state, zip)
+store = address.closest_store()
+order = Order(store, customer, address)
+cardNumber = "123212212"
+cardExpDate = "4654"
+cardSecNum = "551"
+cardZip = "93291"
+card = PaymentObject(cardNumber, cardExpDate, cardSecNum, cardZip)
 
 led1 = LED(21)
 led2 = LED(20)
@@ -15,7 +30,7 @@ sensor3 = LightSensor(18)
 button = Button(23)
 
 choiceIndex = 0
-#add and for if choice index == 0 so it can loop if you dont order anython?
+# add and for if choice index == 0 so it can loop if you dont order anython?
 while (not button.is_pressed):
     if(sensor1.light_detected):
         print("sensor 1 on")
@@ -44,12 +59,14 @@ while (not button.is_pressed):
 
 print(choiceIndex)
 if(choiceIndex == 1):
-    execfile("pizza1.py")
+    order.add_item("P10IREPV")
+    order.place(card)
     print("ordering pizza 1!!!")
 if(choiceIndex == 2):
-    execfile("pizza2.py")
+    order.add_item("20BDCOKE")
+    order.place(card)
     print("ordering pizza 2!!!")
 if(choiceIndex == 3):
-    execfile("pizza3.py")
+    order.add_item("W08PMANW")
+    order.place(card)
     print("ordering pizza 3!!")
-
