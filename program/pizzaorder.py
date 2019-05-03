@@ -1,3 +1,9 @@
+#Script to order pizza from desktop
+#uses pizzapi by Grant Gordon (https://github.com/gamagori)
+#This code is open source and free to use with no restrictions.
+#by Busher Bridi (https://github.com/busherbridi)
+#5/3/2019
+
 from pizzapi import *
 
 print("Pizza Time!")
