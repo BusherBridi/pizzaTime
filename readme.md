@@ -32,5 +32,5 @@ Refer to CONTRIBUTORS.md
 Busher Bridi (https://github.com/busherbridi)
 
 ### License
-This software is open-source and free to use with no restrictions
+This software is open-source and free to use with no restrictions.
 
